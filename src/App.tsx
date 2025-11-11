@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './pages/Login/Login'
+import TopNav from './Components/TopNav'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/login' element={<Login />} />
-        <Route path='/users' element={<div>About Page</div>} />
+        <Route path='/users' element={<TopNav />} />
       </Routes>
     </Router>
     </>

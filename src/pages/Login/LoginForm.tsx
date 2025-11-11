@@ -2,6 +2,7 @@ import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as Yup from "yup"
 import styles from "./Login.module.scss"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginSchema = Yup.object({
 
@@ -10,11 +11,12 @@ const LoginSchema = Yup.object({
 });
 
 export default function LoginForm() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   function handleSubmit() {
        localStorage.setItem("isAuthenticated", "true");
-      window.location.reload();
+  navigate("/users");
     // Submission logic can be added here
   }
  function handleForgot() {
