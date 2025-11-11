@@ -1,0 +1,165 @@
+@use "../../styles/main" as *;
+
+nav {
+    position: fixed;
+    width: 100%;
+    top:0;
+    background-color: #FFFFFF;
+    box-shadow: 3px 0px 20px 0px #0000000A;
+    z-index: 1000;
+   font-family: $secondary-font;
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+           height: 100px;
+           @include respond(tablet){
+            height: fit-content;
+           padding: 2rem 0;
+           }
+           width: 90vw;
+        margin: 0 auto;
+
+        .logo {
+            width: 145px;
+         height: 30px;
+         @include respond(mobile){
+            width: 120px; 
+            height: 25px;
+         }
+        }
+    }
+}
+
+
+
+.navLeft {
+    display: flex;
+   justify-content: space-between;
+    width: 55%;
+    @include respond(tablet) {
+        width: 100%;
+        margin-bottom: 1rem;
+       
+    }
+    align-items: center;
+    gap: 0 2rem;
+    
+    .navSearch{
+        display: flex;
+        align-items: center;
+
+        @include respond(desktop){
+           flex-basis: 70%;
+         }
+       
+        
+      input {
+         width:344px;
+        @include respond(desktop){
+            width: 100%;
+         }
+        height: 40px;
+       font-size: 14px;
+       font-weight: normal;
+            border: 1px solid #213F7D;
+          border-radius: 8px;
+          padding: 1rem;
+
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                
+                color: #545F7D;
+                font-size: 14px;
+                font-weight: 400
+                      }
+        }
+        button {
+            width: 56px;
+height: 40px;
+border: none;
+margin-left: -4px;
+border-radius: 0px 8px 8px 0px;
+background: #39CDCC;
+
+        }
+    }
+}
+
+
+
+.navRight {
+  display: flex;
+  gap: 0 3rem;
+  @include respond(desktop){
+    gap: 0 2rem;
+  }
+  @include respond(tablet){
+    width: 100%;
+    margin: 0.5rem 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+    align-items: center;
+   color:#213F7D;
+
+
+    a {
+        font-family: $tertiary-font;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
+
+    }
+
+
+  .navProfile{
+    display: flex;
+    align-items: center;
+    gap: 0 2rem;
+    @include respond(desktop){
+    gap: 0 1rem;
+  }
+  
+    .navUser {
+display: flex;
+align-items: center;
+gap: 0 1rem;
+
+@include respond(desktop){
+    gap: 0 0.5rem;
+  }
+
+       .navUserImg{
+        width: 48;
+height: 48;
+border-radius: 50%;
+
+       } 
+       p {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0px;
+
+       }
+    }
+  
+  }
+}
+
+
+
+
+img, a, button {
+    cursor: pointer;
+}
