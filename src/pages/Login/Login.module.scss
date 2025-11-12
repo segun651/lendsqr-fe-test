@@ -3,14 +3,14 @@
 .container{
     display: grid;
     width: 90vw;
-    height: 90vh;
-  margin: 0 auto;
+    height: 95vh;
+  margin:  auto;
     align-items: center;
     font-family: $primary-font;
 
     @include respond(tablet) {
        
-        height: 95vh;
+        height: 90vh;
     }
 
   .loginImage{
@@ -22,14 +22,12 @@
 
 .loginBox {
     display: grid;
-    grid-template-columns: auto auto;
-    
-    @include respond(tablet) {
-        grid-template-columns: auto;
-       width: 100%;
-    
-      
+    grid-template-columns: auto ;
+     width: 100%;
         gap: 2rem 0;
+    @include respond(tablet) {
+        grid-template-columns: auto auto;
+      
     }
     
       
@@ -48,10 +46,10 @@
 
     h1{
         font-weight: 700;
-        font-size: 40px;
+        font-size: 35px;
         color:#213F7D;
-       @include respond(desktop) {
-       font-size: 35px;
+       @include respond(tablet) {
+       font-size: 40px;
        }
        
     }
@@ -68,12 +66,11 @@ letter-spacing: 0;
        
         margin-top: auto;
         height: auto;
-          @include respond(desktop) {
-       width: 90%;   
-    }
+          display: none;
+        
           @include respond(tablet) {
-       display: none;
-       
+       display:block;
+       width: 90%;
     }       
     }
     
@@ -93,11 +90,12 @@ letter-spacing: 0;
    
 .emailField{
     position: relative;
-    width: 447px;
+      width: 100%;
+   
             @include respond(desktop) {
-            width: 100%;
-
+       width: 447px;
 }
+
     span{
         position: absolute;
         top: 50%;
@@ -115,9 +113,10 @@ letter-spacing: 0;
        
     border: 2px solid #545F7D26;
     font-size: 14px;
-    width: 447px;
+    width: 100%;
             @include respond(desktop) {
-            width: 100%;
+          
+              width: 447px;
         }
          
 height: 50px;
@@ -132,9 +131,10 @@ padding: 4px 8px;
     }
 
     button {
-        width: 447px;
+       width: 100%;
         @include respond(desktop) {
-            width: 100%;
+           
+              width: 447px;
         }
           
 height: 48px;
