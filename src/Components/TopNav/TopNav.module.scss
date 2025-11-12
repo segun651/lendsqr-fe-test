@@ -2,8 +2,18 @@
 
 nav {
     position: fixed;
-    width: 100%;
     top:0;
+    left:0;
+    
+   
+    @include respond(tablet){
+      left:200px;
+    }
+
+     @include respond(desktop){
+      left:283px;
+    }
+    right:0;
     background-color: #FFFFFF;
     box-shadow: 3px 0px 20px 0px #0000000A;
     z-index: 1000;
@@ -14,52 +24,65 @@ nav {
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-           height: 100px;
-           @include respond(tablet){
             height: fit-content;
-           padding: 2rem 0;
+             padding: 2rem 0;
+           @include respond(tablet){
+           
+            height: 100px;
+            gap:0 2rem;
            }
-           width: 90vw;
+        width: 90%;
         margin: 0 auto;
+        gap:1rem 2rem;
 
-        .logo {
-            width: 145px;
-         height: 30px;
-         @include respond(mobile){
-            width: 120px; 
-            height: 25px;
-         }
-        }
+       
     }
 }
 
 
-
-.navLeft {
-    display: flex;
-   justify-content: space-between;
-    width: 55%;
-    @include respond(tablet) {
-        width: 100%;
-        margin-bottom: 1rem;
-       
-    }
-    align-items: center;
-    gap: 0 2rem;
-    
-    .navSearch{
+    .navLeft{
         display: flex;
         align-items: center;
-
-        @include respond(desktop){
-           flex-basis: 70%;
-         }
-       
+      justify-content: space-between;
+     flex: 1 0 100%;
+    
+      @include respond(tablet){
+   
+       flex-basis:  55%;
+      }
         
-      input {
-         width:344px;
+      svg {
+        flex-basis: 15%;
+        box-shadow: 8px 8px 5px 0px #0000000A;
+        border-radius: 4px;
+    font-size: 2rem;
+    outline: brown;
+        width:24px;
+        height:35px;
+       
+        margin-right: 1.5rem;
+        color:#213F7D;
+        @include respond(tablet){
+     display: none;
+        }
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #213F7D;
+      }
+    }
+      .navSearch{
+        display: flex;
+        width: 100%;
         @include respond(desktop){
-            width: 100%;
+            width: 400px;
+         }  
+        }
+      input {
+        
+         width:100%;
+        @include respond(desktop){
+            width: 344px;
+            
          }
         height: 40px;
        font-size: 14px;
@@ -88,22 +111,21 @@ background: #39CDCC;
 
         }
     }
-}
+
 
 
 
 .navRight {
   display: flex;
-  gap: 0 3rem;
-  @include respond(desktop){
-    gap: 0 2rem;
-  }
-  @include respond(tablet){
-    width: 100%;
-    margin: 0.5rem 0;
+    flex: 1 0 auto; 
+  
     justify-content: flex-end;
-    flex-wrap: wrap;
+  gap: 0 2rem;
+  @include respond(desktop){
+    gap: 0 3rem;
   }
+ 
+  
     align-items: center;
    color:#213F7D;
 
@@ -124,18 +146,18 @@ text-decoration-thickness: 0%;
   .navProfile{
     display: flex;
     align-items: center;
-    gap: 0 2rem;
-    @include respond(desktop){
     gap: 0 1rem;
+    @include respond(desktop){
+    gap: 0 2rem;
   }
   
     .navUser {
 display: flex;
 align-items: center;
-gap: 0 1rem;
+gap: 0 0.5rem;
 
 @include respond(desktop){
-    gap: 0 0.5rem;
+    gap: 0 1rem;
   }
 
        .navUserImg{
