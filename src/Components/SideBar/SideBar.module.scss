@@ -1,0 +1,36 @@
+@use "../../styles/main.scss" as * ;
+
+
+aside {
+
+    width: 100%;
+    display: none;
+    @include respond(tablet){
+      width: 200px;
+      display: block;
+    }
+    @include respond(desktop){
+      width:283px;
+      
+    }
+
+   
+   
+     background-color: #FFFFFF;
+    box-shadow: 3px 0px 20px 0px #0000000A;
+    z-index: 1000;
+  height: 1574px;
+    position: fixed;
+    top:0;
+    left:0;
+    font-family: $secondary-font;
+
+   
+    
+  &.open{
+  display: block;
+    }
+    
+}
+
+ 
