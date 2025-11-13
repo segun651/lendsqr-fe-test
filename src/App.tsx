@@ -2,6 +2,7 @@ import { useState, createContext } from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Users from './pages/Users/Users'
+import UserSharedLayout from './Components/UserSharedLayout/UserSharedLayout'
 
 interface OpenSidebarContextType {
   isOpen: boolean;
@@ -20,7 +21,9 @@ function App() {
     <Router>
       <Routes>
         <Route path='/login' element={<Login />} />
+  <Route element={<UserSharedLayout />}>
         <Route path='/users' element={<Users />} />
+        </Route>
       </Routes>
     </Router>
      </openSidebarContext.Provider>

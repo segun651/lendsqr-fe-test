@@ -3,13 +3,16 @@
 
 aside {
 
-    width: 80%;
+    width: 230px;
     display: none;
     font-family: $secondary-font;
-   
+    top:170px;
+   height: calc(100% - 170px);
     @include respond(tablet){
       width: 250px;
       display: block;
+      top:0;
+       height: 100%;
     }
     @include respond(desktop){
       width:283px;
@@ -18,12 +21,26 @@ aside {
      background-color: #FFFFFF;
     box-shadow: 3px 0px 20px 0px #0000000A;
     z-index: 1000;
-  height: 100%;
-    position: fixed;
-     
-    top:0;
+ 
+    position: fixed;  
+   
     left:0;
     font-family: $secondary-font;
+ overflow-y: auto;       // ✅ allows scrolling
+  scrollbar-width: thin;  // Firefox
+  scrollbar-color: #555 transparent;
+
+  /* For WebKit browsers */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
 
    
     
@@ -38,7 +55,7 @@ aside {
  .sideBarSection{
      display: flex;
      flex-direction: column;
-   
+     
      padding: 2rem 0;
      width: 100%;
      margin: 0 auto;

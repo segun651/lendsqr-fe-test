@@ -24,12 +24,16 @@ nav {
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-            height: fit-content;
+            height: 170px;
+           
              padding: 2rem 0;
            @include respond(tablet){
            
-            height: 100px;
+            height: 150px;
             gap:0 2rem;
+           }
+           @include respond(desktop){
+            height: 100px;
            }
         width: 90%;
         margin: 0 auto;
@@ -52,16 +56,18 @@ nav {
       }
         
       svg {
-        flex-basis: 15%;
+        flex: 1 0;
+        flex-basis: 10%;
         box-shadow: 8px 8px 5px 0px #0000000A;
         border-radius: 4px;
     font-size: 2rem;
-    outline: brown;
+  
         width:24px;
         height:35px;
        
         margin-right: 1.5rem;
-        color:#213F7D;
+       background-color: #213F7D  ; 
+  color: #fff;
         @include respond(tablet){
      display: none;
         }
@@ -117,7 +123,8 @@ background: #39CDCC;
 
 .navRight {
   display: flex;
-    flex: 1 0 auto; 
+  flex-wrap: wrap;
+    flex: 1 auto; 
   
     justify-content: flex-end;
   gap: 0 2rem;

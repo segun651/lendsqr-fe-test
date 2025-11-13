@@ -1,5 +1,4 @@
 import styles from "./TopNav.module.scss"
-import CompanyLogo from "../../assets/images/Group.png"
 import SearchIcon from "../../assets/images/Search.png"
 import profileImage from "../../assets/images/profileImg.png"
 import notificationIcon from "../../assets/images/notifIcon.png"
