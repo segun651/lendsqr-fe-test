@@ -1,0 +1,23 @@
+@use  "../../styles/main.scss" as * ;
+
+.userSharedLayout {
+   background: #FBFBFB;
+   display: flex;
+
+  
+}
+
+
+.mainContent {
+  
+  margin-top: 170px;
+    width: 100%;
+    min-height: 100vh;
+
+  @include respond(tablet){
+    margin-left: 250px;
+  }
+   @include respond(desktop){
+    margin-left: 283px;
+  }
+}
