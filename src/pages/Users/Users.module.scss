@@ -1,0 +1,55 @@
+@use "../../styles/main.scss" as * ;
+
+.usersPage {
+    width: 90%;
+    margin: 0 auto;
+     font-family: $secondary-font;
+    
+     h1{
+color: #213F7D;
+font-weight: 500;
+font-size: 24px;
+ margin-bottom: 4rem;
+
+    }
+}
+
+.userGridCards {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr ;
+  margin: 1.8rem 0;
+   gap:1rem 1.5rem;
+     
+
+    .userCard{
+       
+   
+   display: grid;
+ height: 160px;
+ align-items: center;
+ padding: 10%;
+        gap:1rem 0;
+     
+      
+        box-shadow: 3px 5px 20px 0px #0000000A;
+     border: 1px solid #213F7D0F;
+    border-radius: 4px;
+    
+
+    h5 {
+     color:#545F7D;
+font-weight: 500;
+font-size: 14px;
+text-transform: uppercase;
+
+    }
+    p {
+      color:#213F7D;
+font-weight: 600;
+font-size: 24px;
+text-transform: uppercase;
+
+    }
+    }
+}
+
